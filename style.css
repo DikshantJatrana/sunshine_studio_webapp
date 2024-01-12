@@ -1,0 +1,338 @@
+@font-face {
+    font-family: myfont;
+    src: url(media/SignikaNegative-VariableFont_wght.ttf);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'myfont';
+}
+html,body {
+    background-color: #efeae3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#page1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#navbar{
+    width: 100vw;
+    height: 6.25rem;
+    display: flex;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav-logo{
+    height: 4.35rem;
+    width: 9.65rem;
+    background-image: url(media/sitelogo.svg);
+    background-size: cover;
+}
+#nav-btn{
+    height: 2.8rem;
+    width: 18.75rem;
+    display: flex;
+    align-items: center;
+}
+.btn{
+    height: 2.8rem;
+    width: 5.63rem;
+    text-decoration: none;
+    border: 1px solid rgba(11,5,0,.2);
+    border-radius: 1.3rem;
+    color: #0b0500;
+    padding: 0.6rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    margin-left: 0.7rem;
+    transition: all ease 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.btn h2{
+    font-size: medium;
+    font-weight: 300;
+    z-index: 9;
+}
+.btn::after{
+    content:"";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: -100%;
+    transition: all ease 0.3s;
+    border-radius: 50%;
+    z-index: 2;
+}
+.btn:hover{
+    color: white;
+}
+.btn:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+#hero{
+    padding-top: 11rem;
+    width: 95%;
+    height: 30rem;
+    display: flex;
+    display: flex;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+    border-bottom:0.1rem solid rgba(11,5,0,.2);
+}
+#left{
+    width: 30%;
+    height: 10rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+#right{
+    width: 30rem;
+    height: 16.75rem;
+    font-size: 8rem;
+    font-weight: 600;
+    line-height: 5.75rem;
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+}
+#glue{
+    width: 40%;
+    height: 20rem;
+    position: absolute;
+    right: 0;
+    top: 70%;
+}
+.circle{
+    width:100%;
+    height: 100%;
+    background-color: #fe330a;
+    position: absolute;
+    border-top-left-radius:50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(1.5rem);
+    right: 0;
+}
+@keyframes anime {
+    from{
+        transform: translate(-15%,-15%);
+    }
+    to{
+        transform: translate(0%,0%);
+    }
+}
+@keyframes anim {
+    from{
+        transform: translate(-15%);
+    }
+    to{
+        transform: translate(0%);
+    }
+}
+#move1{
+    right: 3rem;
+    animation-name: anime;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#move2{
+    right: 2rem;
+    animation-name: anim;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+video{
+    margin-top: 3rem;
+    width: 95%;
+    height: 100%;
+    border-radius: 2rem;
+    z-index: 9;
+}
+#page2{
+    width: 100%;
+    position: relative;
+}
+#moving-text{
+    margin-top: 4.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    height: 10rem;
+    width: 100vw;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+.container{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: loop;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.gola{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-color: #fe330a;
+    display: inline-block;
+}
+.container h1{
+    font-size: 8.2rem;
+    display: inline-block;
+}
+@keyframes loop{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#content{
+    margin-top: 3rem;
+    width: 100vw;
+    height: 29.9rem;
+    display: flex;
+    justify-content: space-between;
+    padding-left:10%;
+    padding-right: 10%;
+    padding-bottom: 1rem;
+}
+#para{
+    width: 65%;
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+    display: flex;
+    align-items: flex-start;
+    z-index: 9;
+}
+#img{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: end;
+}
+#img img{
+    width: 100%;
+    height: 30%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+.googy{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background: linear-gradient(to top right,#fe330a,#ff6822);
+    position: absolute;
+    bottom: 4rem;
+    left: 27rem;
+    filter: blur(0.35rem);
+    animation-name: goofy;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes goofy {
+    from{
+        transform: translate(5%,-5%) skew(0);
+    }
+    to{
+        transform: translate(-15%,15%) skew(-15deg);
+    }
+}
+#page3{
+    width: 100vw;
+    padding-top: 5rem;
+}
+.bar{
+    width: 100vw;
+    height: 7.6rem;
+    border-bottom: 0.04rem solid #636262;;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+.head{
+    font-size: 1.6rem;
+    font-weight: 500;
+    z-index: 9;
+}
+.foot{
+    text-align: right;
+    line-height: 1rem;
+    z-index: 9;
+}
+.foot h3{
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.foot h4{
+    font-weight: 300;
+    color: #636262;
+}
+.bar::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #ff9831;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.4s;
+    z-index: 6;
+}
+
+.bar:hover::before{
+    top: 0;
+}
+.project{
+    width: 8rem;
+    margin-top: 2rem;
+    margin-left: 4rem;
+}
+.fixed{
+    width: 25vw;
+    height: 32vw;
+    background-color: red;
+    border-radius: 1.45rem;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    display: none;
+    z-index: 9;
+    background-size: cover;
+}
