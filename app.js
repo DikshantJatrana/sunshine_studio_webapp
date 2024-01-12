@@ -9,7 +9,7 @@ contain.addEventListener("mouseleave",()=>{
 
 var elems = document.querySelectorAll(".bar");
 elems.forEach((e)=>{
-    e.addEventListener("mouseover",()=>{
+    e.addEventListener("mouseenter",()=>{
         var link = e.getAttribute("data-image");
         fixed.style.backgroundImage = `URL(${link})`;
     })
